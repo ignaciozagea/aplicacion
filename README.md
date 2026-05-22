@@ -7,53 +7,81 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+📝 Task Manager - Laravel
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Aplicación web simple de gestión de tareas desarrollada con Laravel siguiendo el patrón MVC. Permite a los usuarios crear y eliminar tareas, con actualización en tiempo real en la interfaz.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+✨ Funcionalidades
 
-## Learning Laravel
+· ✅ Agregar nuevas tareas
+· ❌ Eliminar tareas existentes
+· 💾 Persistencia en base de datos
+· 🔄 Actualización dinámica de la lista de tareas
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+🛠️ Tecnologías utilizadas
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+· Laravel (PHP Framework)
+· MySQL / SQLite
+· Blade (motor de plantillas)
+· Bootstrap (estilos)
+· JavaScript (interacciones básicas)
 
-## Laravel Sponsors
+📁 Estructura del proyecto
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+```
+├── app/               # Controladores y modelos
+├── database/          # Migraciones y seeders
+├── resources/views/   # Vistas Blade
+├── routes/            # Definición de rutas web/api
+├── public/            # Archivos públicos (CSS, JS, assets)
+├── tests/             # Pruebas automatizadas
+└── config/            # Configuración del proyecto
+```
 
-### Premium Partners
+🚀 Instalación y configuración
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+Requisitos previos
 
-## Contributing
+· PHP >= 8.1
+· Composer
+· MySQL (o SQLite)
+· Node.js (opcional, para assets)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Pasos de instalación
 
-## Code of Conduct
+```bash
+# Clonar el repositorio
+git clone https://github.com/tu-usuario/task-manager.git
+cd task-manager
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+# Instalar dependencias de PHP
+composer install
 
-## Security Vulnerabilities
+# Copiar archivo de entorno
+cp .env.example .env
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+# Generar clave de aplicación
+php artisan key:generate
 
-## License
+# Configurar base de datos en .env y ejecutar migraciones
+php artisan migrate
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# (Opcional) Instalar dependencias frontend
+npm install
+npm run build
+
+# Iniciar servidor de desarrollo
+php artisan serve
+```
+
+🧪 Uso
+
+1. Accede a http://localhost:8000
+2. Escribe una tarea en el campo de texto y haz clic en "Agregar"
+3. La tarea aparecerá en la lista
+4. Haz clic en el botón "Eliminar" para borrarla
+
+📄 Licencia
+
+MIT
